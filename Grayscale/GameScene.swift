@@ -13,19 +13,19 @@ class GameScene: SKScene {
     var keys:[PianoKey] = [];
     
     override func didMoveToView(view: SKView) {
-        self.size = CGSize(width: 320, height: 480);
+        self.size = CGSize(width: 320, height: 568);
         self.backgroundColor = UIColor.whiteColor();
       
         let keyAnimation:SKAction = SKAction.group([
             SKAction.scaleTo(0.3, duration: 4),
             SKAction.moveTo(CGPoint(x: -200, y: -350), duration: 4),
         ]);
-        //keyAnimation.timingMode = SKActionTimingMode.EaseIn;
         
         for i in 0...4 {
             let newKey = PianoKey(actionGroup: keyAnimation, delay: i);
             self.addChild(newKey.sprite);
             newKey.startAnimation();
+            self.keys.append(newKey);
         }
     }
     
@@ -50,6 +50,6 @@ class GameScene: SKScene {
         self.visuals.update(currentTime);
         
         let speed = (-1 * self.visuals.power - 20) / 2;
-        self.speed = speed < 0.2 ? 0.2 : speed;
+        self.speed = CGFloat(speed < 0.2 ? 0.2 : speed);
     }
 }

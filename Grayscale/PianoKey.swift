@@ -13,9 +13,13 @@ class PianoKey {
     let sprite = SKSpriteNode(imageNamed: "key");
     let actionWithDelay:SKAction;
     let actionToLoop:SKAction;
+    let colorArray = [UIColor.blueColor(), UIColor.greenColor(), UIColor.redColor(), UIColor.yellowColor(), UIColor.purpleColor()];
     
     init(actionGroup:SKAction, delay:Int) {
         self.sprite.anchorPoint = CGPoint(x: 0, y: 0);
+        self.sprite.alpha = 0.87;
+        self.sprite.colorBlendFactor = 0.7;
+        self.sprite.color = UIColor.blackColor();
         self.actionWithDelay = SKAction.sequence([
             SKAction.waitForDuration(NSTimeInterval(delay)),
             actionGroup
@@ -47,6 +51,7 @@ class PianoKey {
     
     
     func onTap() {
-        
+        self.sprite.color = self.colorArray[Int(arc4random_uniform(UInt32(self.colorArray.count)))];
+
     }
 }
