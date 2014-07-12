@@ -15,7 +15,8 @@
 		DC1C361D1971AE6800F265DA /* VisualLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C361C1971AE6800F265DA /* VisualLogic.swift */; };
 		DC1C36211971B74000F265DA /* bogota.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC1C36201971B74000F265DA /* bogota.mp3 */; };
 		DC1C36261971D75C00F265DA /* PianoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C36251971D75C00F265DA /* PianoKey.swift */; };
-		DC37A4171971DE6300AD1319 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = DC37A4161971DE6300AD1319 /* key.png */; };
+		DC8DF3DF1971F545003225F1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DC8DF3DE1971F545003225F1 /* GameScene.sks */; };
+		DCAFB7251971F43F00997E1B /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = DCAFB7241971F43F00997E1B /* key.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,8 @@
 		DC1C361C1971AE6800F265DA /* VisualLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualLogic.swift; sourceTree = "<group>"; };
 		DC1C36201971B74000F265DA /* bogota.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bogota.mp3; sourceTree = "<group>"; };
 		DC1C36251971D75C00F265DA /* PianoKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PianoKey.swift; sourceTree = "<group>"; };
-		DC37A4161971DE6300AD1319 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		DC8DF3DE1971F545003225F1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		DCAFB7241971F43F00997E1B /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,7 @@
 		DC1C35F81971ABF000F265DA /* Grayscale */ = {
 			isa = PBXGroup;
 			children = (
-				DC37A4161971DE6300AD1319 /* key.png */,
+				DCAFB7241971F43F00997E1B /* key.png */,
 				DC1C36201971B74000F265DA /* bogota.mp3 */,
 				DC1C35FB1971ABF000F265DA /* AppDelegate.swift */,
 				DC1C35FF1971ABF000F265DA /* GameScene.swift */,
@@ -92,6 +94,7 @@
 				DC1C36031971ABF000F265DA /* Main.storyboard */,
 				DC1C35F91971ABF000F265DA /* Supporting Files */,
 				DC1C36251971D75C00F265DA /* PianoKey.swift */,
+				DC8DF3DE1971F545003225F1 /* GameScene.sks */,
 			);
 			path = Grayscale;
 			sourceTree = "<group>";
@@ -201,7 +204,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC37A4171971DE6300AD1319 /* key.png in Resources */,
+				DC8DF3DF1971F545003225F1 /* GameScene.sks in Resources */,
+				DCAFB7251971F43F00997E1B /* key.png in Resources */,
 				DC1C36211971B74000F265DA /* bogota.mp3 in Resources */,
 				DC1C36051971ABF000F265DA /* Main.storyboard in Resources */,
 			);
