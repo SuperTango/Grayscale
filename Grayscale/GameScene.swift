@@ -49,6 +49,7 @@ class GameScene: SKScene {
         /* Called before each frame is rendered */
         self.visuals.update(currentTime);
         
-        //self.speed = -1 * self.visuals.stereoPower[0];
+        let speed = (-1 * self.visuals.power - 20) / 2;
+        self.speed = speed < 0.2 ? 0.2 : speed;
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC12FA3F1971FAD100A47BD3 /* grayscale.aif in Resources */ = {isa = PBXBuildFile; fileRef = DC12FA3E1971FAD100A47BD3 /* grayscale.aif */; };
 		DC1C35FC1971ABF000F265DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C35FB1971ABF000F265DA /* AppDelegate.swift */; };
 		DC1C36001971ABF000F265DA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C35FF1971ABF000F265DA /* GameScene.swift */; };
 		DC1C36021971ABF000F265DA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C36011971ABF000F265DA /* GameViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC12FA3E1971FAD100A47BD3 /* grayscale.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = grayscale.aif; sourceTree = "<group>"; };
 		DC1C35F61971ABF000F265DA /* Grayscale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grayscale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1C35FA1971ABF000F265DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC1C35FB1971ABF000F265DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		DC1C35F81971ABF000F265DA /* Grayscale */ = {
 			isa = PBXGroup;
 			children = (
+				DC12FA3E1971FAD100A47BD3 /* grayscale.aif */,
 				DCAFB7241971F43F00997E1B /* key.png */,
 				DC1C36201971B74000F265DA /* bogota.mp3 */,
 				DC1C35FB1971ABF000F265DA /* AppDelegate.swift */,
@@ -207,6 +210,7 @@
 				DC8DF3DF1971F545003225F1 /* GameScene.sks in Resources */,
 				DCAFB7251971F43F00997E1B /* key.png in Resources */,
 				DC1C36211971B74000F265DA /* bogota.mp3 in Resources */,
+				DC12FA3F1971FAD100A47BD3 /* grayscale.aif in Resources */,
 				DC1C36051971ABF000F265DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,10 +12,10 @@ import AVFoundation
 
 class VisualLogic {
     let audioPlayer:AVAudioPlayer;
-    var stereoPower:[Float] = [0.0, 0.0];
+    var power:Float = 0;
     
     init() {
-        let audioUrl = NSURL(string: NSBundle.mainBundle().pathForResource("bogota", ofType: "mp3"));
+        let audioUrl = NSURL(string: NSBundle.mainBundle().pathForResource("grayscale", ofType: "aif"));
         var audioError:NSError?;
         
         self.audioPlayer = AVAudioPlayer(contentsOfURL: audioUrl, error: &audioError);
@@ -33,8 +33,10 @@ class VisualLogic {
             let leftPower = audioPlayer.averagePowerForChannel(0);
             let rightPower = audioPlayer.averagePowerForChannel(1);
 
-            self.stereoPower[0] = leftPower > -1 ? -1 : leftPower;
-            self.stereoPower[1] = rightPower > -1 ? -1 : rightPower;
+            self.power = leftPower + rightPower;
+            
+            /*self.stereoPower[0] = leftPower > -1 ? -1 : leftPower;
+            self.stereoPower[1] = rightPower > -1 ? -1 : rightPower;*/
         }
     }
 }
