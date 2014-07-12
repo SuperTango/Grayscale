@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC1C35FC1971ABF000F265DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C35FB1971ABF000F265DA /* AppDelegate.swift */; };
+		DC1C36001971ABF000F265DA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C35FF1971ABF000F265DA /* GameScene.swift */; };
+		DC1C36021971ABF000F265DA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C36011971ABF000F265DA /* GameViewController.swift */; };
+		DC1C36051971ABF000F265DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1C36031971ABF000F265DA /* Main.storyboard */; };
+		DC1C36131971ABF100F265DA /* GrayscaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C36121971ABF100F265DA /* GrayscaleTests.swift */; };
+		DC1C361D1971AE6800F265DA /* VisualLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C361C1971AE6800F265DA /* VisualLogic.swift */; };
+		DC1C36211971B74000F265DA /* bogota.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC1C36201971B74000F265DA /* bogota.mp3 */; };
+		DC1C36261971D75C00F265DA /* PianoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C36251971D75C00F265DA /* PianoKey.swift */; };
+		DC37A4171971DE6300AD1319 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = DC37A4161971DE6300AD1319 /* key.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC1C360D1971ABF000F265DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC1C35EE1971ABF000F265DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC1C35F51971ABF000F265DA;
+			remoteInfo = Grayscale;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC1C35F61971ABF000F265DA /* Grayscale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grayscale.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1C35FA1971ABF000F265DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC1C35FB1971ABF000F265DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC1C35FF1971ABF000F265DA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		DC1C36011971ABF000F265DA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		DC1C36041971ABF000F265DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC1C360C1971ABF000F265DA /* GrayscaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrayscaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1C36111971ABF100F265DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC1C36121971ABF100F265DA /* GrayscaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscaleTests.swift; sourceTree = "<group>"; };
+		DC1C361C1971AE6800F265DA /* VisualLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualLogic.swift; sourceTree = "<group>"; };
+		DC1C36201971B74000F265DA /* bogota.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bogota.mp3; sourceTree = "<group>"; };
+		DC1C36251971D75C00F265DA /* PianoKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PianoKey.swift; sourceTree = "<group>"; };
+		DC37A4161971DE6300AD1319 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC1C35F31971ABF000F265DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC1C36091971ABF000F265DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC1C35ED1971ABF000F265DA = {
+			isa = PBXGroup;
+			children = (
+				DC1C35F81971ABF000F265DA /* Grayscale */,
+				DC1C360F1971ABF000F265DA /* GrayscaleTests */,
+				DC1C35F71971ABF000F265DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC1C35F71971ABF000F265DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C35F61971ABF000F265DA /* Grayscale.app */,
+				DC1C360C1971ABF000F265DA /* GrayscaleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC1C35F81971ABF000F265DA /* Grayscale */ = {
+			isa = PBXGroup;
+			children = (
+				DC37A4161971DE6300AD1319 /* key.png */,
+				DC1C36201971B74000F265DA /* bogota.mp3 */,
+				DC1C35FB1971ABF000F265DA /* AppDelegate.swift */,
+				DC1C35FF1971ABF000F265DA /* GameScene.swift */,
+				DC1C36011971ABF000F265DA /* GameViewController.swift */,
+				DC1C361C1971AE6800F265DA /* VisualLogic.swift */,
+				DC1C36031971ABF000F265DA /* Main.storyboard */,
+				DC1C35F91971ABF000F265DA /* Supporting Files */,
+				DC1C36251971D75C00F265DA /* PianoKey.swift */,
+			);
+			path = Grayscale;
+			sourceTree = "<group>";
+		};
+		DC1C35F91971ABF000F265DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C35FA1971ABF000F265DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC1C360F1971ABF000F265DA /* GrayscaleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C36121971ABF100F265DA /* GrayscaleTests.swift */,
+				DC1C36101971ABF100F265DA /* Supporting Files */,
+			);
+			path = GrayscaleTests;
+			sourceTree = "<group>";
+		};
+		DC1C36101971ABF100F265DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C36111971ABF100F265DA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC1C35F51971ABF000F265DA /* Grayscale */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC1C36161971ABF100F265DA /* Build configuration list for PBXNativeTarget "Grayscale" */;
+			buildPhases = (
+				DC1C35F21971ABF000F265DA /* Sources */,
+				DC1C35F31971ABF000F265DA /* Frameworks */,
+				DC1C35F41971ABF000F265DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Grayscale;
+			productName = Grayscale;
+			productReference = DC1C35F61971ABF000F265DA /* Grayscale.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC1C360B1971ABF000F265DA /* GrayscaleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC1C36191971ABF100F265DA /* Build configuration list for PBXNativeTarget "GrayscaleTests" */;
+			buildPhases = (
+				DC1C36081971ABF000F265DA /* Sources */,
+				DC1C36091971ABF000F265DA /* Frameworks */,
+				DC1C360A1971ABF000F265DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC1C360E1971ABF000F265DA /* PBXTargetDependency */,
+			);
+			name = GrayscaleTests;
+			productName = GrayscaleTests;
+			productReference = DC1C360C1971ABF000F265DA /* GrayscaleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC1C35EE1971ABF000F265DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Stephen Haney";
+				TargetAttributes = {
+					DC1C35F51971ABF000F265DA = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					DC1C360B1971ABF000F265DA = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = DC1C35F51971ABF000F265DA;
+					};
+				};
+			};
+			buildConfigurationList = DC1C35F11971ABF000F265DA /* Build configuration list for PBXProject "Grayscale" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC1C35ED1971ABF000F265DA;
+			productRefGroup = DC1C35F71971ABF000F265DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC1C35F51971ABF000F265DA /* Grayscale */,
+				DC1C360B1971ABF000F265DA /* GrayscaleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC1C35F41971ABF000F265DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC37A4171971DE6300AD1319 /* key.png in Resources */,
+				DC1C36211971B74000F265DA /* bogota.mp3 in Resources */,
+				DC1C36051971ABF000F265DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC1C360A1971ABF000F265DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC1C35F21971ABF000F265DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1C36261971D75C00F265DA /* PianoKey.swift in Sources */,
+				DC1C36001971ABF000F265DA /* GameScene.swift in Sources */,
+				DC1C36021971ABF000F265DA /* GameViewController.swift in Sources */,
+				DC1C361D1971AE6800F265DA /* VisualLogic.swift in Sources */,
+				DC1C35FC1971ABF000F265DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC1C36081971ABF000F265DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1C36131971ABF100F265DA /* GrayscaleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC1C360E1971ABF000F265DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC1C35F51971ABF000F265DA /* Grayscale */;
+			targetProxy = DC1C360D1971ABF000F265DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC1C36031971ABF000F265DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC1C36041971ABF000F265DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC1C36141971ABF100F265DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC1C36151971ABF100F265DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC1C36171971ABF100F265DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Grayscale/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC1C36181971ABF100F265DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Grayscale/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC1C361A1971ABF100F265DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Grayscale.app/Grayscale";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GrayscaleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		DC1C361B1971ABF100F265DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Grayscale.app/Grayscale";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GrayscaleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC1C35F11971ABF000F265DA /* Build configuration list for PBXProject "Grayscale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC1C36141971ABF100F265DA /* Debug */,
+				DC1C36151971ABF100F265DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC1C36161971ABF100F265DA /* Build configuration list for PBXNativeTarget "Grayscale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC1C36171971ABF100F265DA /* Debug */,
+				DC1C36181971ABF100F265DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC1C36191971ABF100F265DA /* Build configuration list for PBXNativeTarget "GrayscaleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC1C361A1971ABF100F265DA /* Debug */,
+				DC1C361B1971ABF100F265DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC1C35EE1971ABF000F265DA /* Project object */;
+}
