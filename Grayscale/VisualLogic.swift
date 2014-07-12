@@ -22,7 +22,7 @@ class VisualLogic {
         self.audioPlayer.numberOfLoops = -1;
 
         self.audioPlayer.pause();
-        //self.audioPlayer.play();
+        self.audioPlayer.play();
         self.audioPlayer.meteringEnabled = true;
     }
     
@@ -35,8 +35,6 @@ class VisualLogic {
 
             self.stereoPower[0] = leftPower > -1 ? -1 : leftPower;
             self.stereoPower[1] = rightPower > -1 ? -1 : rightPower;
-            
-            println(stereoPower);
         }
     }
 }

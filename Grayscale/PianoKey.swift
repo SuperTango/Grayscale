@@ -14,14 +14,15 @@ class PianoKey {
     let actionWithDelay:SKAction;
     let actionToLoop:SKAction;
     
-    init(position:CGPoint, actionGroup:SKAction, delay:Int) {
+    init(actionGroup:SKAction, delay:Int) {
         self.sprite.anchorPoint = CGPoint(x: 0, y: 0);
-        self.sprite.position = position;
         self.actionWithDelay = SKAction.sequence([
             SKAction.waitForDuration(NSTimeInterval(delay)),
             actionGroup
-            ]);
+        ]);
         self.actionToLoop = actionGroup;
+        
+        self.reset();
     }
     
     func startAnimation() {
@@ -35,7 +36,7 @@ class PianoKey {
         self.sprite.runAction(self.actionToLoop, completion: {
             self.reset();
             self.animate();
-            });
+        });
     }
     
     func reset() {
