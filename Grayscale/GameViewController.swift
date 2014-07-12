@@ -24,8 +24,12 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
-
+class GameViewController: UIViewController, UIGestureRecognizerDelegate {
+    var gestureRecognizer: UIPanGestureRecognizer?
+    var tapGestureRecognizer: UITapGestureRecognizer?
+    var buttonViewArray = [UIView]()
+    var currentPressedIndex: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +47,10 @@ class GameViewController: UIViewController {
             
             skView.presentScene(scene)
         }
+        
+        // Play notes
+        addButtons();
+        addGestureRecongnizer();
     }
 
     override func shouldAutorotate() -> Bool {
@@ -63,6 +71,102 @@ class GameViewController: UIViewController {
     }
 
     override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    // Sean added the code below
+    
+    func addGestureRecongnizer() {
+        gestureRecognizer = UIPanGestureRecognizer(target: self, action: "onPanGesture:")
+        
+        if let newTapGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
+            newTapGestureRecognizer.delegate = self
+        }
+        
+        self.view.addGestureRecognizer(gestureRecognizer)
+        
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onTapGesture:")
+        
+        if let newTapGestureRecognizer = tapGestureRecognizer as? UITapGestureRecognizer {
+            newTapGestureRecognizer.delegate = self
+        }
+
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    func onPanGesture(gestureRecognizer: UIGestureRecognizer) {
+        switch (gestureRecognizer.state) {
+//        case .Began:
+//            playAudio()
+            
+        case .Changed:
+            var position = gestureRecognizer.locationInView(self.view)
+            var verticalPercent = position.y / 568.0
+            var horizontalPercent = position.x / 320.0
+            
+//            audioPlayer.volume = Float(horizontalPercent)
+            
+            self.view.backgroundColor = UIColor(red: CGFloat(verticalPercent), green: 0.5, blue: 0.5, alpha: 1.0)
+            
+            showButtonBasedOnVerticalPositionWhenChanged(position.y)
+            
+        default:
+            return
+        }
+    }
+    
+    func onTapGesture(gestureRecognizer: UIGestureRecognizer) {
+        var position = gestureRecognizer.locationInView(self.view)
+        showButtonBasedOnVerticalPosition(position.y)
+    }
+    
+    func addButtons() {
+        var eachHeight = 568.0 / 5.0;
+        
+        var i = 0;
+        for (i=0;i<5;i++) {
+            var newView = UIView()
+            newView.frame.origin.x = 0
+            
+            var nextPosition = eachHeight * CGFloat(i)
+            newView.frame.origin.y = nextPosition
+            newView.frame.size.width = 320.0
+            newView.frame.size.height = eachHeight
+            
+            newView.backgroundColor = UIColor.whiteColor()
+            newView.alpha = 0.0
+            buttonViewArray += newView
+            
+            self.view.addSubview(newView)
+        }
+    }
+    
+    func showButtonBasedOnVerticalPositionWhenChanged(position: CGFloat) {
+        var index = floor(position / 568.0 * 5)
+        if (currentPressedIndex != index) {
+            currentPressedIndex = Int(index);
+            
+            var targetView = buttonViewArray[Int(index)]
+            targetView.alpha = 0.4
+            
+            UIView.animateWithDuration(0.6, animations: {
+                targetView.alpha = 0.0
+                })
+        }
+    }
+
+    func showButtonBasedOnVerticalPosition(position: CGFloat) {
+        var index = floor(position / 568.0 * 5)
+        var targetView = buttonViewArray[Int(index)]
+        targetView.alpha = 0.4
+        
+        UIView.animateWithDuration(0.6, animations: {
+            targetView.alpha = 0.0
+            })
+    }
+    
+    // Gesture delegate
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer!, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer!) -> Bool {
         return true
     }
 }

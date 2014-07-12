@@ -14,7 +14,7 @@ class GameScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         self.size = CGSize(width: 320, height: 480);
-        self.backgroundColor = UIColor.whiteColor();
+        self.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.5, alpha: 1.0)
       
         let keyAnimation:SKAction = SKAction.group([
             SKAction.scaleTo(0.3, duration: 4),
