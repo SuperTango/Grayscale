@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
@@ -29,6 +30,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     var tapGestureRecognizer: UITapGestureRecognizer?
     var buttonViewArray = [UIView]()
     var currentPressedIndex: Int?
+    var audioArray = [AVAudioPlayer]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +51,9 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         
         // Play notes
-        addButtons();
-        addGestureRecongnizer();
+        addButtons()
+        addAudioFiles()
+        addGestureRecongnizer()
     }
 
     override func shouldAutorotate() -> Bool {
@@ -118,7 +121,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     func addButtons() {
         var eachHeight = 480.0 / 5.0;
         
-        var i = 0;
+        var i = 0
         for (i=0;i<5;i++) {
             var newView = UIView()
             newView.frame.origin.x = 0
@@ -141,6 +144,8 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         if (currentPressedIndex != index) {
             currentPressedIndex = Int(index);
             
+            playAudioWithIndex(Int(index))
+            
             var targetView = buttonViewArray[Int(index)]
             targetView.alpha = 0.4
             
@@ -155,9 +160,24 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         var targetView = buttonViewArray[Int(index)]
         targetView.alpha = 0.4
         
+        playAudioWithIndex(Int(index))
+        
         UIView.animateWithDuration(0.6, animations: {
             targetView.alpha = 0.0
             })
+    }
+    
+    func playAudioWithIndex(index: Int) {
+        audioArray[index].play()
+    }
+    
+    func addAudioFiles() {
+        var i = 0
+        for (i=0;i<8;i++) {
+            var newAudioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("note_0\(i)", ofType: "aif")), error: nil)
+            newAudioPlayer.prepareToPlay()
+            audioArray += newAudioPlayer
+        }
     }
     
     // Gesture delegate

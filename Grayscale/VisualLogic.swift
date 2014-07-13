@@ -22,6 +22,7 @@ class VisualLogic {
         self.audioPlayer.numberOfLoops = -1;
 
         self.audioPlayer.pause();
+        self.audioPlayer.volume = 0.4
         self.audioPlayer.play();
         self.audioPlayer.meteringEnabled = true;
     }
