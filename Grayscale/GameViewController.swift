@@ -96,15 +96,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func onPanGesture(gestureRecognizer: UIGestureRecognizer) {
         switch (gestureRecognizer.state) {
-//        case .Began:
-//            playAudio()
-            
         case .Changed:
             var position = gestureRecognizer.locationInView(self.view)
-            var verticalPercent = position.y / 568.0
+            var verticalPercent = position.y / 480.0
             var horizontalPercent = position.x / 320.0
-            
-//            audioPlayer.volume = Float(horizontalPercent)
             
             self.view.backgroundColor = UIColor(red: CGFloat(verticalPercent), green: 0.5, blue: 0.5, alpha: 1.0)
             
@@ -121,17 +116,17 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func addButtons() {
-        var eachHeight = 568.0 / 5.0;
+        var eachHeight = 480.0 / 5.0;
         
         var i = 0;
         for (i=0;i<5;i++) {
             var newView = UIView()
             newView.frame.origin.x = 0
             
-            var nextPosition = eachHeight * CGFloat(i)
+            var nextPosition = CGFloat(CGFloat(eachHeight) * CGFloat(i))
             newView.frame.origin.y = nextPosition
             newView.frame.size.width = 320.0
-            newView.frame.size.height = eachHeight
+            newView.frame.size.height = CGFloat(eachHeight)
             
             newView.backgroundColor = UIColor.whiteColor()
             newView.alpha = 0.0
@@ -142,7 +137,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func showButtonBasedOnVerticalPositionWhenChanged(position: CGFloat) {
-        var index = floor(position / 568.0 * 5)
+        var index = floor(position / 480.0 * 5)
         if (currentPressedIndex != index) {
             currentPressedIndex = Int(index);
             
@@ -156,7 +151,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     func showButtonBasedOnVerticalPosition(position: CGFloat) {
-        var index = floor(position / 568.0 * 5)
+        var index = floor(position / 480.0 * 5)
         var targetView = buttonViewArray[Int(index)]
         targetView.alpha = 0.4
         
