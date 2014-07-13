@@ -119,10 +119,10 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func addButtons() {
-        var eachHeight = 480.0 / 5.0;
+        var eachHeight = 480.0 / 8.0;
         
         var i = 0
-        for (i=0;i<5;i++) {
+        for (i=0;i<8;i++) {
             var newView = UIView()
             newView.frame.origin.x = 0
             
@@ -140,7 +140,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func showButtonBasedOnVerticalPositionWhenChanged(position: CGFloat) {
-        var index = floor(position / 480.0 * 5)
+        var index = floor(position / 480.0 * 8)
         if (currentPressedIndex != index) {
             currentPressedIndex = Int(index);
             
@@ -156,7 +156,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     func showButtonBasedOnVerticalPosition(position: CGFloat) {
-        var index = floor(position / 480.0 * 5)
+        var index = floor(position / 480.0 * 8)
         var targetView = buttonViewArray[Int(index)]
         targetView.alpha = 0.4
         
