@@ -14,7 +14,7 @@ class PianoKey {
     let actionWithDelay:SKAction;
     let actionToLoop:SKAction;
     
-    init(actionGroup:SKAction, delay:Int) {
+    init(actionGroup:SKAction, delay:Float) {
         self.sprite.anchorPoint = CGPoint(x: 0, y: 0);
         self.actionWithDelay = SKAction.sequence([
             SKAction.waitForDuration(NSTimeInterval(delay)),
