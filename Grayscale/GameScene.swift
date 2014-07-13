@@ -22,8 +22,8 @@ class GameScene: SKScene {
         ]);
         //keyAnimation.timingMode = SKActionTimingMode.EaseIn;
         
-        for i in 0...4 {
-            let newKey = PianoKey(actionGroup: keyAnimation, delay: i);
+        for i in 0...50 {
+            let newKey = PianoKey(actionGroup: keyAnimation, delay: Float(i) * Float(0.2));
             self.addChild(newKey.sprite);
             newKey.startAnimation();
         }
