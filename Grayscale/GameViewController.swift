@@ -31,7 +31,11 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     var buttonViewArray = [UIView]()
     var currentPressedIndex: Int?
     var audioArray = [AVAudioPlayer]()
-    
+
+    required init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -81,20 +85,20 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func addGestureRecongnizer() {
         gestureRecognizer = UIPanGestureRecognizer(target: self, action: "onPanGesture:")
-        
-        if let newTapGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
-            newTapGestureRecognizer.delegate = self
-        }
-        
-        self.view.addGestureRecognizer(gestureRecognizer)
-        
-        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onTapGesture:")
-        
-        if let newTapGestureRecognizer = tapGestureRecognizer as? UITapGestureRecognizer {
+
+        if let newTapGestureRecognizer = gestureRecognizer {
             newTapGestureRecognizer.delegate = self
         }
 
-        self.view.addGestureRecognizer(tapGestureRecognizer)
+        self.view.addGestureRecognizer(gestureRecognizer!)
+        
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onTapGesture:")
+
+        if let newTapGestureRecognizer = tapGestureRecognizer {
+            newTapGestureRecognizer.delegate = self
+        }
+
+        self.view.addGestureRecognizer(tapGestureRecognizer!)
     }
     
     func onPanGesture(gestureRecognizer: UIGestureRecognizer) {
@@ -133,7 +137,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
             
             newView.backgroundColor = UIColor.whiteColor()
             newView.alpha = 0.0
-            buttonViewArray += newView
+            buttonViewArray += [newView]
             
             self.view.addSubview(newView)
         }
@@ -141,7 +145,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func showButtonBasedOnVerticalPositionWhenChanged(position: CGFloat) {
         var index = floor(position / 480.0 * 8)
-        if (currentPressedIndex != index) {
+        if (currentPressedIndex != Int(index)) {
             currentPressedIndex = Int(index);
             
             playAudioWithIndex(Int(index))
@@ -176,7 +180,7 @@ class GameViewController: UIViewController, UIGestureRecognizerDelegate {
         for (i=0;i<8;i++) {
             var newAudioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("note_0\(i)", ofType: "aif")), error: nil)
             newAudioPlayer.prepareToPlay()
-            audioArray += newAudioPlayer
+            audioArray += [newAudioPlayer]
         }
     }
     

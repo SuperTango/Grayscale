@@ -49,7 +49,7 @@ class GameScene: SKScene {
         /* Called before each frame is rendered */
         self.visuals.update(currentTime);
         
-        let speed = (self.visuals.power * -1 - 10) / 25;
+        let speed = CGFloat (self.visuals.power * -1 - 10) / 25;
         self.speed = (speed < 0.2 ? 0.2 : speed)
     }
 }
